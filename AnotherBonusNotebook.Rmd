@@ -1,0 +1,20 @@
+---
+title: "R Notebook"
+author: "Renata Spinelli"
+output: html_notebook
+---
+
+```{r}
+data("Orange")
+
+treecolors <- c("red","orange","yellow","green","blue","purple")
+treeshape <- c(3,7,14,19,22)
+
+plot(circumference ~ age, data = Orange, 
+     xlab = "Circumference",
+     ylab  = "Age", 
+     main = "Plot of circumference versus age",
+     type = "p", 
+     pch = treeshape[Orange$Tree],
+     col = treecolors[Orange$Tree])
+```
